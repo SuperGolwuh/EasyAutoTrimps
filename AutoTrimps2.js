@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         EasyAutoTrimps-EAT-SuperGolwuh
 // @version      0.1337
-// @namespace    https://github.com/SuperGolwuh/EasyAutoTrimps
-// @updateURL    https://github.com/SuperGolwuh/EasyAutoTrimps/.user.js
+// @namespace    https://github.com/SuperGolwuh//EasyAutoTrimps
+// @updateURL    https://github.com/SuperGolwuh//EasyAutoTrimps/.user.js
 // @description  Automate all the trimps! For Lazy and/or New People
 // @author       zininzinin, spindrjr, Ishkaru, genBTC, Zeker0, Meowchan, SuperGolwuh
 // @include      *trimps.github.io*
@@ -12,9 +12,9 @@
 // @grant        none
 // ==/UserScript==
 var script = document.createElement('script');
-script.id = 'EasyAutoTrimps-NT-SliverzPatch';
+script.id = 'EasyAutoTrimps-GW-GolwuhPatch';
 //This can be edited to point to your own Github Repository URL.
-script.src = 'https://github.com/SuperGolwuh/EasyAutoTrimps/EasyAutoTrimps2.js';
+script.src = 'https://github.com/SuperGolwuh//EasyAutoTrimps/EasyAutoTrimps2.js';
 //script.setAttribute('crossorigin',"use-credentials");
 script.setAttribute('crossorigin',"anonymous");
 document.head.appendChild(script);
@@ -28,7 +28,7 @@ var ATversion = '2.1.7.1'; //when this increases it forces users setting update 
 
 var local = false;
 //local = true;
-var ver = "53.19";
+var ver = "0.1337";
 var verDate = "15.4.19";
 
 var changelogList = [];
@@ -37,7 +37,7 @@ changelogList.push({date: "4.30.2019", version: "", description: "Tutorial for N
 
 
 var atscript = document.getElementById('EasyAutoTrimps-script'),
-        basepath = (local ? 'EasyAutoTrimps/' : 'https://slivermasterz.github.io/EasyAutoTrimps/'),
+        basepath = (local ? 'EasyAutoTrimps/' : 'https://github.com/SuperGolwuh/EasyAutoTrimps/'),
         modulepath = 'modules/';
 
 var initialized = false;
@@ -173,7 +173,7 @@ function startAT() {
 
     let script = document.createElement('script');
     script.id = 'SpireBuilder-script';
-    script.src = 'https://slivermasterz.github.io/TrimpScripts/SpireBuilder.js';
+    script.src = 'https://github.com/SuperGolwuh/TrimpScripts/SpireBuilder.js';
     script.setAttribute('crossorigin',"anonymous");
     document.head.appendChild(script);
 
