@@ -17,7 +17,7 @@ script.id = 'EasyAutoTrimps-GW-GolwuhPatch';
 script.src = 'https://github.com/SuperGolwuh/EasyAutoTrimps/EasyAutoTrimps.js';
 //script.setAttribute('crossorigin',"use-credentials");
 document.head.appendChild(script);
-var ATversion = '2.1.7.1'; //when this increases it forces users setting update to newer version format
+var ATversion = '0.1337'; //when this increases it forces users setting update to newer version format
 
 //<script type="text/javascript" src="EasyAutoTrimps/EasyAutoTrimps.js?"></script>
 ////////////////////////////////////////////////////////////////////////////////
@@ -31,8 +31,8 @@ var ver = "0.1337";
 var verDate = "15.4.19";
 
 var changelogList = [];
-changelogList.push({date: "5.1.2019", version: "", description: "This, during initial testing, will serve as an open source Auto Trimps project to ease people into EasyAutoTrimps, an aspect of the game "Trimps" from GreenSatellite.", isNew: true});
-changelogList.push({date: "4.30.2019", version: "", description: "Tutorial for New Players coming soon!", isNew: false});
+changelogList.push({date: "5.1.2019", version: "0.1337", description: "This, during initial testing, will serve as an open source Auto Trimps project to ease people into EasyAutoTrimps, an aspect of the game "Trimps" from GreenSatellite.", isNew: true});
+changelogList.push({date: "4.30.2019", version: "0.1", description: "Tutorial for New Players coming soon!", isNew: false});
 
 
 var atscript = document.getElementById('EasyAutoTrimps-script'),
