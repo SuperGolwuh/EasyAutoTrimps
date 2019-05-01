@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         AutoTrimps-EAT-SuperGolwuh
+// @name         EasyAutoTrimps-EAT-SuperGolwuh
 // @version      0.1337
 // @namespace    https://github.com/SuperGolwuh/EasyAutoTrimps
 // @updateURL    https://github.com/SuperGolwuh/EasyAutoTrimps/.user.js
@@ -12,15 +12,15 @@
 // @grant        none
 // ==/UserScript==
 var script = document.createElement('script');
-script.id = 'AutoTrimps-EAT-SuperGolwuh';
+script.id = 'EasyAutoTrimps-NT-SliverzPatch';
 //This can be edited to point to your own Github Repository URL.
-script.src = 'https://github.com/SuperGolwuh/EasyAutoTrimps/AutoTrimps2.js';
+script.src = 'https://github.com/SuperGolwuh/EasyAutoTrimps/EasyAutoTrimps2.js';
 //script.setAttribute('crossorigin',"use-credentials");
 script.setAttribute('crossorigin',"anonymous");
 document.head.appendChild(script);
-var ATversion = '0.1337'; //when this increases it forces users setting update to newer version format
+var ATversion = '2.1.7.1'; //when this increases it forces users setting update to newer version format
 
-//<script type="text/javascript" src="AutoTrimps/AutoTrimps2.js?"></script>
+//<script type="text/javascript" src="EasyAutoTrimps/AutoTrimps2.js?"></script>
 ////////////////////////////////////////////////////////////////////////////////
 //Main Loader Initialize Function (loads first, load everything else)///////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -32,12 +32,12 @@ var ver = "53.19";
 var verDate = "15.4.19";
 
 var changelogList = [];
-changelogList.push({date: "5.1.2019", version: "", description: "This, during initial testing, will serve as an open source Auto Trimps project to ease people into AutoTrimps, an aspect of the game "Trimps" from GreenSatellite.", isNew: true});
+changelogList.push({date: "5.1.2019", version: "", description: "This, during initial testing, will serve as an open source Auto Trimps project to ease people into EasyAutoTrimps, an aspect of the game "Trimps" from GreenSatellite.", isNew: true});
 changelogList.push({date: "4.30.2019", version: "", description: "Tutorial for New Players coming soon!", isNew: false});
 
 
-var atscript = document.getElementById('AutoTrimps-script'),
-        basepath = (local ? 'AutoTrimps/' : 'https://slivermasterz.github.io/AutoTrimps/'),
+var atscript = document.getElementById('EasyAutoTrimps-script'),
+        basepath = (local ? 'EasyAutoTrimps/' : 'https://slivermasterz.github.io/EasyAutoTrimps/'),
         modulepath = 'modules/';
 
 var initialized = false;
@@ -49,8 +49,8 @@ function startAT() {
     }
     
     if(!initialized){ //perform once
-        pendingLogs.AutoTrimps = []; //adds AT messages slot. needed before we can call debug()
-        initializeAutoTrimps(); //loads modules asynchronously
+        pendingLogs.EasyAutoTrimps = []; //adds AT messages slot. needed before we can call debug()
+        initializeEasyAutoTrimps(); //loads modules asynchronously
         initialized = true;
     }
     
@@ -82,10 +82,10 @@ function startAT() {
     
     //HTML For adding a 5th tab to the message window
     var ATbutton = document.createElement("button");
-    ATbutton.innerHTML = 'AutoTrimps';
-    ATbutton.setAttribute('id', 'AutoTrimpsFilter');
+    ATbutton.innerHTML = 'EasyAutoTrimps';
+    ATbutton.setAttribute('id', 'EasyAutoTrimpsFilter');
     ATbutton.setAttribute('type', 'button');
-    ATbutton.setAttribute('onclick', "filterMessage2('AutoTrimps')");
+    ATbutton.setAttribute('onclick', "filterMessage2('EasyAutoTrimps')");
     ATbutton.setAttribute('class', "btn btn-success logFlt");
     //
     var tab = document.createElement("DIV");
@@ -98,7 +98,7 @@ function startAT() {
     //    printLowerLevelPlayerNotice();
     //Set some game ars after we load.
     game.global.addonUser = true;
-    game.global.autotrimps = true;
+    game.global.EasyAutoTrimps = true;
     heirloomCache = game.global.heirloomsExtra.length;
     MODULESdefault = JSON.parse(JSON.stringify(MODULES));
     
@@ -130,9 +130,9 @@ function startAT() {
     activateClicked = (function(makeUp, now) {
         var cached_function = activateClicked;
         return function(makeUp, now) {
-            if(typeof autoTrimpSettings.APCheckBoxes !== 'undefined' && autoTrimpSettings.APCheckBoxes.userSaveATSettings){ //save relevant AT settings
-                setPageSetting('TillWeHaveAmalg',   autoTrimpSettings.APValueBoxes.amalGoal); //amal goal
-                setPageSetting('NoCoordBuyStartZ',  (autoTrimpSettings.APValueBoxes.amalZone - autoTrimpSettings.APValueBoxes.coordsBehind)); //start no coord buy
+            if(typeof EasyAutoTrimpsettings.APCheckBoxes !== 'undefined' && EasyAutoTrimpsettings.APCheckBoxes.userSaveATSettings){ //save relevant AT settings
+                setPageSetting('TillWeHaveAmalg',   EasyAutoTrimpsettings.APValueBoxes.amalGoal); //amal goal
+                setPageSetting('NoCoordBuyStartZ',  (EasyAutoTrimpsettings.APValueBoxes.amalZone - EasyAutoTrimpsettings.APValueBoxes.coordsBehind)); //start no coord buy
                 setPageSetting('FuelFromZ',         AutoPerks.fuelStartZone); //fuel start zone
                 setPageSetting('FuelToZ',           AutoPerks.fuelEndZone); //fuel end zone
                 setPageSetting('FuelUntilAmal',     false); //fuel until amalgamator
@@ -177,16 +177,16 @@ function startAT() {
     script.setAttribute('crossorigin',"anonymous");
     document.head.appendChild(script);
 
-    if (typeof autoTrimpSettings["toggleExport"] !== "undefined") toggleExport = autoTrimpSettings["toggleExport"];
-    if (typeof autoTrimpSettings["MinSpireCost"] !== "undefined") MinSpireCost = autoTrimpSettings["MinSpireCost"];
+    if (typeof EasyAutoTrimpsettings["toggleExport"] !== "undefined") toggleExport = EasyAutoTrimpsettings["toggleExport"];
+    if (typeof EasyAutoTrimpsettings["MinSpireCost"] !== "undefined") MinSpireCost = EasyAutoTrimpsettings["MinSpireCost"];
 	
-    debug('AutoTrimps loaded!');
+    debug('EasyAutoTrimps loaded!');
 
 }
 
 //This should redirect the script to wherever its being mirrored from.
 if (atscript !== null) {
-    basepath = atscript.src.replace(/AutoTrimps2\.js$/, '');
+    basepath = atscript.src.replace(/EasyAutoTrimps2\.js$/, '');
 }
 
 //This could potentially do something one day. like: read localhost url from tampermonkey.
@@ -210,8 +210,8 @@ function ATscriptLoad(pathname, modulename) {
 ATscriptLoad(modulepath, 'utils');    //Load stuff needed to load other stuff:
 
 //This starts up after game is loaded
-function initializeAutoTrimps() {
-    loadPageVariables();            //get autoTrimpSettings
+function initializeEasyAutoTrimps() {
+    loadPageVariables();            //get EasyAutoTrimpsettings
     ATscriptLoad('','SettingsGUI');   //populate Settings GUI
     ATscriptLoad('','Graphs');        //populate Graphs
     //Load modules:
@@ -219,8 +219,8 @@ function initializeAutoTrimps() {
     for (var m in ATmoduleList) 
         ATscriptLoad(modulepath, ATmoduleList[m]);
     
-    //debug('AutoTrimps v' + ATversion + ' ' + ver + ' Loaded!', '*spinner3');
-    debug('AutoTrimps v' + ATversion + ' ' + ver);
+    //debug('EasyAutoTrimps v' + ATversion + ' ' + ver + ' Loaded!', '*spinner3');
+    debug('EasyAutoTrimps v' + ATversion + ' ' + ver);
 }
 
 function assembleChangelog(date,version,description,isNew) {
@@ -238,16 +238,16 @@ function printChangelog() {
     }
     var footer =
         '<b>Ongoing Development</b> - <u>Report any bugs/problems please</u>!\
-        <br>Talk with the dev: <b>Sliverz#7416</b> @ <a target="#" href="https://discord.gg/W2Ajv4j">AutoTrimps Discord Channel</a>'
+        <br>Talk with the dev: <b>Sliverz#7416</b> @ <a target="#" href="https://discord.gg/W2Ajv4j">EasyAutoTrimps Discord Channel</a>'
     ,   action = 'cancelTooltip()'
-    ,   title = "AutoTrimps - Meowchan's Fork<br>" + "v" + ver + " " + verDate
-    ,   acceptBtnText = "Thank you for playing AutoTrimps!"
+    ,   title = "EasyAutoTrimps - Meowchan's Fork<br>" + "v" + ver + " " + verDate
+    ,   acceptBtnText = "Thank you for playing EasyAutoTrimps!"
     ,   hideCancel = true;
     tooltip('confirm', null, 'update', body+footer, action, title, acceptBtnText, null, hideCancel);
 }
 
 function printLowerLevelPlayerNotice() {
-    tooltip('confirm', null, 'update', 'The fact that it works at all is misleading new players into thinking its perfect. Its not. If your highest zone is under z60, you have not unlocked the stats required, and have not experienced the full meta with its various paradigm shifts. If you are just starting, my advice is to play along naturally and use AutoTrimps as a tool, not a crutch. Play with the settings as if it was the game, Dont expect to go unattended, if AT chooses wrong, and make the RIGHT choice yourself. Additionally, its not coded to run one-time challenges for you, only repeatable ones for helium. During this part of the game, content is king - automating literally removes the fun of the game. If you find that many flaws in the automation exist for you, level up. Keep in mind the challenge of maintaining the code is that it has to work for everyone. AT cant see the future and doesnt run simulations, it exists only in the present moment. Post any suggestions on how it can be better, or volunteer to adapt the code, or produce some sort of low-level player guide with what youve learned.<br>Happy scripting! -genBTC','cancelTooltip()', '<b>LowLevelPlayer Notes:</b><br><b>PSA: </b><u>AutoTrimps was not designed for new/low-level players.</u>', "I understand I am on my own and I Accept and Continue.", null, true);
+    tooltip('confirm', null, 'update', 'The fact that it works at all is misleading new players into thinking its perfect. Its not. If your highest zone is under z60, you have not unlocked the stats required, and have not experienced the full meta with its various paradigm shifts. If you are just starting, my advice is to play along naturally and use EasyAutoTrimps as a tool, not a crutch. Play with the settings as if it was the game, Dont expect to go unattended, if AT chooses wrong, and make the RIGHT choice yourself. Additionally, its not coded to run one-time challenges for you, only repeatable ones for helium. During this part of the game, content is king - automating literally removes the fun of the game. If you find that many flaws in the automation exist for you, level up. Keep in mind the challenge of maintaining the code is that it has to work for everyone. AT cant see the future and doesnt run simulations, it exists only in the present moment. Post any suggestions on how it can be better, or volunteer to adapt the code, or produce some sort of low-level player guide with what youve learned.<br>Happy scripting! -genBTC','cancelTooltip()', '<b>LowLevelPlayer Notes:</b><br><b>PSA: </b><u>EasyAutoTrimps was not designed for new/low-level players.</u>', "I understand I am on my own and I Accept and Continue.", null, true);
 }
 
 ////////////////////////////////////////
@@ -255,10 +255,10 @@ function printLowerLevelPlayerNotice() {
 ////////////////////////////////////////
 ////////////////////////////////////////
 var ATrunning = true;   //status var
-var ATmessageLogTabVisible = true;    //show an AutoTrimps tab after Story/Loot/Unlocks/Combat message Log Container
+var ATmessageLogTabVisible = true;    //show an EasyAutoTrimps tab after Story/Loot/Unlocks/Combat message Log Container
 var enableDebug = true; //Spam console.log with debug info
 
-var autoTrimpSettings = {};
+var EasyAutoTrimpsettings = {};
 var MODULES = {};
 var MODULESdefault = {};
 var ATMODULES = {};
@@ -404,7 +404,7 @@ function ATLoop(makeUp){ //makeUp = true when game is in catchup mode, so we can
     maxAnti = game.portal.Anticipation.level > 0 ? (game.talents.patience.purchased ? 45 : 30) : 0;
     if(game.global.mapsActive) currMap = getCurrentMapObject();
     attacksPerSecondAT = calcAttacksPerSecond();
-    expectedPortalZone = autoTrimpSettings.AutoPortal.selected !== "Custom" ? 0 : getPageSetting('CustomAutoPortal') + (game.global.challengeActive == "Daily" ? getPageSetting('AutoFinishDailyNew') : 0);
+    expectedPortalZone = EasyAutoTrimpsettings.AutoPortal.selected !== "Custom" ? 0 : getPageSetting('CustomAutoPortal') + (game.global.challengeActive == "Daily" ? getPageSetting('AutoFinishDailyNew') : 0);
     bsZone = (0.5*game.talents.blacksmith.purchased + 0.25*game.talents.blacksmith2.purchased + 0.15*game.talents.blacksmith3.purchased)*(game.global.highestLevelCleared + 1);    
     
     aWholeNewWorld = currentworld != game.global.world;
@@ -454,7 +454,7 @@ function ATLoop(makeUp){ //makeUp = true when game is in catchup mode, so we can
     autoMap(); //automaps() is in charge of maps combat
     updateAutoMapsStatus("", statusMsg, true); //update status
 
-    if (autoTrimpSettings.AutoPortal.selected != "Off") autoPortal();   //"Auto Portal" (hidden until level 40) (portal.js)
+    if (EasyAutoTrimpsettings.AutoPortal.selected != "Off") autoPortal();   //"Auto Portal" (hidden until level 40) (portal.js)
     
     if (aWholeNewWorld && getPageSetting('AutoRoboTrimp')) autoRoboTrimp();   //"AutoRoboTrimp" (other.js)
     if (aWholeNewWorld && getPageSetting('FinishC2')>0 && game.global.runningChallengeSquared) finishChallengeSquared(); // "Finish Challenge2" (other.js)
@@ -530,7 +530,7 @@ function oncePerZoneCode(){
         currMap = getCurrentMapObject();
     
     attacksPerSecondAT = calcAttacksPerSecond();
-    expectedPortalZone = autoTrimpSettings.AutoPortal.selected !== "Custom" ? 0 : getPageSetting('CustomAutoPortal') + (game.global.challengeActive == "Daily" ? getPageSetting('AutoFinishDailyNew') : 0);
+    expectedPortalZone = EasyAutoTrimpsettings.AutoPortal.selected !== "Custom" ? 0 : getPageSetting('CustomAutoPortal') + (game.global.challengeActive == "Daily" ? getPageSetting('AutoFinishDailyNew') : 0);
     bsZone = (0.5*game.talents.blacksmith.purchased + 0.25*game.talents.blacksmith2.purchased + 0.15*game.talents.blacksmith3.purchased)*(game.global.highestLevelCleared + 1);    
     
     calcBaseDamageinB();
