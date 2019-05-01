@@ -7,7 +7,7 @@
 // @author       zininzinin, spindrjr, Ishkaru, genBTC, Zeker0, Meowchan, SuperGolwuh
 // @include      *trimps.github.io*
 // @include      *kongregate.com/games/GreenSatellite/trimps*
-// @connect      *https://github.com/SuperGolwuh/EasyAutoTrimps*
+// @connect      *https://github.com/SuperGolwuh/EasyAutoTrimps
 // @connect      *trimps.github.io*
 // @connect      self
 // @grant        none
