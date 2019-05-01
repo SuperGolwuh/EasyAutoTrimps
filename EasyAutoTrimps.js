@@ -20,7 +20,7 @@ script.setAttribute('crossorigin',"anonymous");
 document.head.appendChild(script);
 var ATversion = '2.1.7.1'; //when this increases it forces users setting update to newer version format
 
-//<script type="text/javascript" src="EasyAutoTrimps/AutoTrimps2.js?"></script>
+//<script type="text/javascript" src="EasyAutoTrimps/EasyAutoTrimps.js?"></script>
 ////////////////////////////////////////////////////////////////////////////////
 //Main Loader Initialize Function (loads first, load everything else)///////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -186,7 +186,7 @@ function startAT() {
 
 //This should redirect the script to wherever its being mirrored from.
 if (atscript !== null) {
-    basepath = atscript.src.replace(/EasyAutoTrimps2\.js$/, '');
+    basepath = atscript.src.replace(/EasyEasyAutoTrimps\.js$/, '');
 }
 
 //This could potentially do something one day. like: read localhost url from tampermonkey.
