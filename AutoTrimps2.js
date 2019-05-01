@@ -1,13 +1,23 @@
 // ==UserScript==
-// @name         EasyAutoTrimps
-// @version      2.1.6.9b-genbtc-4-2-2018 (Modified by SuperGolwuh originally for pirate use)
-// @updateURL    https://github.com/SuperGolwuh/EasyAutoTrimps/AutoTrimps2.js
-// @description  Automate all the trimps!
-// @author       zininzinin, spindrjr, belaith, ishakaru, genBTC, Unihedron, coderPatsy, Kfro, Zeker0, Meowchan, SuperGolwuh
+// @name         AutoTrimps-EAT-SuperGolwuh
+// @version      0.1337
+// @namespace    https://github.com/SuperGolwuh/EasyAutoTrimps
+// @updateURL    https://github.com/SuperGolwuh/EasyAutoTrimps/.user.js
+// @description  Automate all the trimps! For Lazy and/or New People
+// @author       zininzinin, spindrjr, Ishkaru, genBTC, Zeker0, Meowchan, SuperGolwuh
 // @include      *trimps.github.io*
-// @include      *kongregate.com/games/GreenSatellite/trimps
+// @include      *kongregate.com/games/GreenSatellite/trimps*
+// @connect      *github.com/SuperGolwuh/EasyAutoTrimps*
+// @connect      self
 // @grant        none
 // ==/UserScript==
+var script = document.createElement('script');
+script.id = 'AutoTrimps-NT-SliverzPatch';
+//This can be edited to point to your own Github Repository URL.
+script.src = 'https://github.com/SuperGolwuh/EasyAutoTrimps/AutoTrimps2.js';
+//script.setAttribute('crossorigin',"use-credentials");
+script.setAttribute('crossorigin',"anonymous");
+document.head.appendChild(script);
 var ATversion = '2.1.7.1'; //when this increases it forces users setting update to newer version format
 
 //<script type="text/javascript" src="AutoTrimps/AutoTrimps2.js?"></script>
