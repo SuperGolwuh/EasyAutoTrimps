@@ -16,7 +16,7 @@ script.id = 'EasyAutoTrimps-GW-GolwuhPatch';
 //This can be edited to point to your own Github Repository URL.
 script.src = 'https://github.com/SuperGolwuh/EasyAutoTrimps/EasyAutoTrimps.js';
 //script.setAttribute('crossorigin',"use-credentials");
-Access-Control-Allow-Origin : https://github.com/SuperGolwuh/EasyAutoTrimps
+Access-Control-Allow-Origin : *
 script.setAttribute('crossorigin',"anonymous");
 document.head.appendChild(script);
 var ATversion = '2.1.7.1'; //when this increases it forces users setting update to newer version format
