@@ -14,7 +14,7 @@
 var script = document.createElement('script');
 script.id = 'EasyAutoTrimps-GW-GolwuhPatch';
 //This can be edited to point to your own Github Repository URL.
-script.src = 'https://github.com/SuperGolwuh//EasyAutoTrimps/EasyAutoTrimps2.js';
+script.src = 'https://github.com/SuperGolwuh//EasyAutoTrimps/EasyAutoTrimps.js';
 //script.setAttribute('crossorigin',"use-credentials");
 script.setAttribute('crossorigin',"anonymous");
 document.head.appendChild(script);
