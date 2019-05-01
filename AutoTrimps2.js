@@ -12,13 +12,13 @@
 // @grant        none
 // ==/UserScript==
 var script = document.createElement('script');
-script.id = 'EasyAutoTrimps';
+script.id = 'AutoTrimps-EAT-SuperGolwuh';
 //This can be edited to point to your own Github Repository URL.
 script.src = 'https://github.com/SuperGolwuh/EasyAutoTrimps/AutoTrimps2.js';
 //script.setAttribute('crossorigin',"use-credentials");
 script.setAttribute('crossorigin',"anonymous");
 document.head.appendChild(script);
-var ATversion = '2.1.7.1'; //when this increases it forces users setting update to newer version format
+var ATversion = '0.1337'; //when this increases it forces users setting update to newer version format
 
 //<script type="text/javascript" src="AutoTrimps/AutoTrimps2.js?"></script>
 ////////////////////////////////////////////////////////////////////////////////
