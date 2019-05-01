@@ -12,7 +12,7 @@
 // @grant        none
 // ==/UserScript==
 var script = document.createElement('script');
-script.id = 'AutoTrimps-NT-SliverzPatch';
+script.id = 'EasyAutoTrimps';
 //This can be edited to point to your own Github Repository URL.
 script.src = 'https://github.com/SuperGolwuh/EasyAutoTrimps/AutoTrimps2.js';
 //script.setAttribute('crossorigin',"use-credentials");
