@@ -2,7 +2,7 @@
 // @name         AutoTrimps-EAT-SuperGolwuh
 // @version      0.1337
 // @namespace    https://github.com/SuperGolwuh/EasyAutoTrimps/
-// @updateURL    https://github.com/SuperGolwuh/EasyAutoTrimps/install.user.js
+// @updateURL    https://github.com/SuperGolwuh/EasyAutoTrimps/.user.js
 // @description  Automate all the trimps!
 // @author       zininzinin, spindrjr, Ishkaru, genBTC, Zeker0, Meowchan, SuperGolwuh
 // @include      *trimps.github.io*
